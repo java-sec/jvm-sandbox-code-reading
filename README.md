@@ -1,3 +1,11 @@
+# 此仓库仅用于源码阅读学习，阅读源码根据个人理解增加了部分注释
+
+
+
+---
+
+
+
 # ![BANNER](https://github.com/alibaba/jvm-sandbox/wiki/img/BANNER.png)
 
 [![Build Status](https://travis-ci.org/alibaba/jvm-sandbox.svg?branch=master)](https://travis-ci.org/alibaba/jvm-sandbox)
@@ -52,7 +60,7 @@
 2. **动态编织**：动态编织则允许在JVM运行过程中完成指定方法的AOP字节码增强.常见的动态编织方案大多采用重命名原有方法，再新建一个同签名的方法来做代理的工作模式来完成AOP的功能(常见的实现方案如CgLib)，但这种方式存在一些应用边界：
    - **侵入性**：对被代理的目标类需要进行侵入式改造。比如：在Spring中必须是托管于Spring容器中的Bean
    - **固化性**：目标代理方法在启动之后即固化，无法重新对一个已有方法进行AOP增强
- 
+
 要解决`无侵入`的特性需要AOP框架具备 **在运行时完成目标方法的增强和替换**。在JDK的规范中运行期重定义一个类必须准循以下原则
   1. 不允许新增、修改和删除成员变量
   2. 不允许新增和删除方法
@@ -113,7 +121,7 @@ try {
   ```shell
   # 下载最新版本的JVM-SANDBOX，oss已到期，或者oss链接不可访问时，可选择自行打包
   wget https://ompc.oss-cn-hangzhou.aliyuncs.com/jvm-sandbox/release/sandbox-1.3.3-bin.zip
-
+  
   # 解压
   unzip sandbox-1.3.3-bin.zip
   ```
